@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/thermometer"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Convert Temperature"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim_30"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/dim_30"
+        android:layout_marginTop="@dimen/dim_10"/>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dim_5"
+    android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/etTemperatureInput"
+            android:layout_width="@dimen/dim_170"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_no_underline"
+            android:hint="Enter Temperature"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim_20"
+            android:layout_marginLeft="@dimen/dim_10"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:layout_width="@dimen/dim_35"
+        android:layout_height="@dimen/dim_30"
+        android:src="@drawable/arrow_right_alt_24" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_30"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/dim_20"
+            android:textColor="@color/black"
+            tools:ignore="MissingPrefix" />
+
+</LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rdConversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/toFahrenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_30"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_20"
+            android:checked="true"
+            android:text="To Fahrenheit"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/toCelsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_50"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_30"
+            android:text="To Celsius"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dim_20"
+        android:backgroundTint="@color/blue"
+        android:onClick="convertTemperature"
+        android:text="Convert" />
+
+
+</LinearLayout>
